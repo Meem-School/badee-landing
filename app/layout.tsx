@@ -1,6 +1,5 @@
 import type { Metadata, Viewport } from "next";
 import { Cairo, Tajawal } from "next/font/google";
-import Script from "next/script";
 import "./globals.css";
 import { SITE } from "@/lib/constants";
 import { JsonLd } from "@/components/JsonLd";
@@ -28,9 +27,10 @@ export const viewport: Viewport = {
 export const metadata: Metadata = {
   metadataBase: new URL(SITE.url),
   title: {
-    default: `${SITE.name} — ${SITE.tagline}`,
-    template: `%s | ${SITE.name}`,
+    default: "بديع | Badee Program — مبدعون بلا حدود",
+    template: "%s | بديع | Badee Program",
   },
+  applicationName: "Badee Program",
   description: SITE.description,
   keywords: [
     "كورس ذكاء اصطناعي للأطفال",

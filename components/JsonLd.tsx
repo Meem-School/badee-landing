@@ -37,8 +37,8 @@ const course = {
     "@type": "CourseInstance",
     courseMode: "online",
     courseWorkload: `PT${PROGRAM.sessions * 1.5}H`,
-    startDate: "2026-06-06",
-    endDate: "2026-07-07",
+    startDate: "2026-06-16",
+    endDate: "2026-07-21",
     location: {
       "@type": "VirtualLocation",
       url: SITE.url,
@@ -79,7 +79,7 @@ const faq = {
       name: "هل التعلم أونلاين؟",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "نعم، 10 جلسات تفاعلية أونلاين على مدار 5 أسابيع.",
+        text: "نعم، 10 جلسات تفاعلية أونلاين — جلستين أسبوعياً.",
       },
     },
     {

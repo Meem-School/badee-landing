@@ -4,6 +4,14 @@ import { motion } from "framer-motion";
 import { Globe, Bot, Presentation, BookOpen, Wand2, Workflow } from "lucide-react";
 import { SectionHeader } from "@/components/SectionHeader";
 import { FloatingRobot } from "@/components/FloatingRobot";
+import {
+  WebsiteMockup,
+  AIChatMockup,
+  SlidesMockup,
+  StudyMockup,
+  DashboardMockup,
+  WorkflowMockup,
+} from "@/components/mockups/Mockups";
 
 const outputs = [
   {
@@ -11,36 +19,42 @@ const outputs = [
     title: "موقع إلكتروني كامل",
     desc: "يبني موقعه الأول بنفسه باستخدام الذكاء الاصطناعي.",
     tag: "Web",
+    Visual: WebsiteMockup,
   },
   {
     icon: Bot,
     title: "مشاريع AI",
     desc: "أدوات وروبوتات تفاعلية بمساعدة الـ AI.",
     tag: "AI Apps",
+    Visual: AIChatMockup,
   },
   {
     icon: Presentation,
     title: "عروض احترافية",
     desc: "بريزنتيشن بأسلوب الشركات بضغطة واحدة.",
     tag: "Slides",
+    Visual: SlidesMockup,
   },
   {
     icon: BookOpen,
     title: "مساعد دراسي ذكي",
     desc: "أداة AI تساعده يذاكر أسرع وأذكى.",
     tag: "Study",
+    Visual: StudyMockup,
   },
   {
     icon: Wand2,
-    title: "محتوى إبداعي",
-    desc: "صور، فيديوهات، ومحتوى يقدر ينتجه بنفسه.",
-    tag: "Content",
+    title: "لوحات تحكم ذكية",
+    desc: "Dashboards تحلل البيانات وتطلع insights فورية.",
+    tag: "Dashboard",
+    Visual: DashboardMockup,
   },
   {
     icon: Workflow,
-    title: "Workflows ذكية",
-    desc: "يأتمت مهامه اليومية ويوفر وقته.",
+    title: "Workflows مؤتمتة",
+    desc: "يأتمت مهامه اليومية ويوفر وقته بشكل احترافي.",
     tag: "Automation",
+    Visual: WorkflowMockup,
   },
 ];
 
@@ -56,7 +70,8 @@ export function Outputs() {
           eyebrow="النتائج"
           title={
             <span id="outputs-heading">
-              بعد البرنامج… ابنك مش هيكون <span className="gradient-text">مجرد مستخدم</span>
+              بعد البرنامج… ابنك مش هيكون{" "}
+              <span className="gradient-text">مجرد مستخدم</span>
             </span>
           }
           description="هيخرج صانع. عنده مشاريع حقيقية يقدر يعرضها، ومهارات تفتحله أبواب مش هي الأم بنفسها متخيلاها."
@@ -66,8 +81,8 @@ export function Outputs() {
           {outputs.map((o, i) => (
             <motion.article
               key={o.title}
-              initial={{ opacity: 0, y: 30, filter: "blur(8px)" }}
-              whileInView={{ opacity: 1, y: 0, filter: "blur(0)" }}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-60px" }}
               transition={{ duration: 0.6, delay: i * 0.07 }}
               className="group relative overflow-hidden rounded-3xl glass p-6 md:p-7 hover:-translate-y-1 transition-transform duration-300"
@@ -86,22 +101,12 @@ export function Outputs() {
               <h3 className="relative font-display font-black text-xl md:text-2xl text-foreground leading-tight">
                 {o.title}
               </h3>
-              <p className="relative text-sm md:text-base text-muted-foreground mt-2 leading-relaxed">
+              <p className="relative text-sm md:text-base text-muted-foreground mt-2 leading-relaxed min-h-[3rem]">
                 {o.desc}
               </p>
 
-              <div className="relative mt-6 h-24 rounded-xl bg-gradient-to-br from-navy-900 to-navy-950 border border-white/5 overflow-hidden">
-                <div className="absolute inset-0 grid-pattern opacity-30" />
-                <div className="absolute inset-3 rounded-lg bg-gradient-to-br from-white/[0.05] to-transparent border border-white/5" />
-                <div className="absolute top-4 right-4 flex gap-1">
-                  <span className="h-2 w-2 rounded-full bg-red-400/60" />
-                  <span className="h-2 w-2 rounded-full bg-gold-400/60" />
-                  <span className="h-2 w-2 rounded-full bg-green-400/60" />
-                </div>
-                <div className="absolute bottom-3 right-4 left-4 space-y-1.5">
-                  <div className="h-1.5 w-1/2 rounded-full bg-white/20" />
-                  <div className="h-1.5 w-2/3 rounded-full bg-white/10" />
-                </div>
+              <div className="relative mt-5">
+                <o.Visual />
               </div>
             </motion.article>
           ))}

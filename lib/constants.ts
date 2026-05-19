@@ -1,5 +1,5 @@
 export const SITE = {
-  name: "بديع | BADEE PROGRAM",
+  name: "بديع | Badee Program",
   shortName: "بديع",
   tagline: "مبدعون بلا حدود",
   url: "https://badee.meem-online-school.vercel.app",
@@ -11,13 +11,13 @@ export const SITE = {
 
 export const PROGRAM = {
   name: "بديع",
-  englishName: "BADEE PROGRAM",
+  englishName: "Badee Program",
   audience: "12–18 سنة",
-  duration: "5 أسابيع",
+  duration: "10 جلسات",
   sessions: 10,
   mode: "أونلاين تفاعلي",
-  startDate: "6 / 6",
-  endDate: "7 / 7",
+  webinarDate: "6 / 6",
+  startDate: "16 / 6",
   originalPrice: 4000,
   discountedPrice: 2250,
   discountPercent: 45,
@@ -48,10 +48,11 @@ export const INSTRUCTOR = {
   name: "م. أنس أحمد",
   title: "AI Engineer",
   credentials: [
-    "AI Engineer",
-    "Worked with Microsoft & I-Tech",
-    "Researcher at AUC",
-    "AI Certifications",
+    "AI Researcher at AUC",
+    "3 سنين خبرة في AI Engineering",
+    "3 سنين خبرة تدريس",
+    "درّب أكثر من 400 طالب على منصات متعددة",
+    "خبرة مع Microsoft & iTech Solutions",
   ],
 } as const;
 

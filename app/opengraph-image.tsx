@@ -1,7 +1,6 @@
 import { ImageResponse } from "next/og";
 
-export const runtime = "edge";
-export const alt = "بديع — مبدعون بلا حدود";
+export const alt = "بديع | Badee Program — مبدعون بلا حدود";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
@@ -26,19 +25,38 @@ export default async function OG() {
       >
         <div
           style={{
-            fontSize: 36,
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+            width: 160,
+            height: 160,
+            borderRadius: 32,
+            background: "linear-gradient(135deg, #4a6cf7, #22d3ee)",
+            marginBottom: 30,
+            fontSize: 96,
+            fontWeight: 900,
+            color: "white",
+            boxShadow: "0 30px 60px rgba(74,108,247,0.5)",
+          }}
+        >
+          B
+        </div>
+        <div
+          style={{
+            fontSize: 32,
             color: "#22d3ee",
-            letterSpacing: 4,
-            marginBottom: 20,
+            letterSpacing: 8,
+            marginBottom: 16,
+            fontWeight: 700,
           }}
         >
           BADEE PROGRAM
         </div>
         <div
           style={{
-            fontSize: 120,
+            fontSize: 88,
             fontWeight: 900,
-            lineHeight: 1,
+            lineHeight: 1.1,
             background:
               "linear-gradient(90deg, #22d3ee 0%, #4a6cf7 50%, #facc15 100%)",
             backgroundClip: "text",
@@ -46,19 +64,16 @@ export default async function OG() {
             marginBottom: 24,
           }}
         >
-          بديع
-        </div>
-        <div style={{ fontSize: 48, fontWeight: 800, marginBottom: 30 }}>
-          مبدعون بلا حدود
+          Creators Without Limits
         </div>
         <div
           style={{
-            fontSize: 28,
+            fontSize: 32,
             color: "#a3aed0",
             maxWidth: 900,
           }}
         >
-          برنامج تعليم الذكاء الاصطناعي للمراهقين 12–18 سنة
+          AI program for teens — 12 to 18
         </div>
       </div>
     ),

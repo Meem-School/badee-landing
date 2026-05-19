@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import Image from "next/image";
 import { motion } from "framer-motion";
 import { NAV_LINKS, SITE } from "@/lib/constants";
 import { WhatsAppButton } from "@/components/WhatsAppButton";
@@ -29,13 +30,24 @@ export function Navbar() {
       )}
     >
       <div className="container flex items-center justify-between h-16 md:h-20">
-        <a href="#hero" className="flex items-center gap-2 group" aria-label="بديع">
-          <span className="relative grid place-items-center h-9 w-9 rounded-xl bg-gradient-to-br from-primary to-electric-500 font-black text-white text-lg shadow-lg shadow-primary/30">
-            ب
+        <a
+          href="#hero"
+          className="flex items-center gap-3 group"
+          aria-label="بديع — الصفحة الرئيسية"
+        >
+          <span className="relative grid place-items-center h-11 w-11 md:h-12 md:w-12 rounded-xl bg-white shadow-lg shadow-primary/20 ring-1 ring-white/10 overflow-hidden">
+            <Image
+              src="/Badee-logo-without.png"
+              alt="شعار برنامج بديع"
+              width={48}
+              height={48}
+              priority
+              className="h-full w-full object-contain p-0.5"
+            />
           </span>
           <span className="font-display font-black text-lg leading-none tracking-tight">
             {SITE.shortName}
-            <span className="block text-[10px] font-medium text-muted-foreground">
+            <span className="block text-[10px] font-medium text-muted-foreground mt-1">
               {SITE.tagline}
             </span>
           </span>

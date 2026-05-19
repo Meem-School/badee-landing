@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { SITE, NAV_LINKS, WHATSAPP_LINK, WHATSAPP_NUMBER_DISPLAY } from "@/lib/constants";
 import { WhatsAppIcon } from "@/components/WhatsAppIcon";
 
@@ -10,8 +11,14 @@ export function Footer() {
         <div className="grid md:grid-cols-12 gap-10">
           <div className="md:col-span-5">
             <div className="flex items-center gap-3">
-              <span className="grid place-items-center h-10 w-10 rounded-xl bg-gradient-to-br from-primary to-electric-500 font-black text-white text-lg">
-                ب
+              <span className="grid place-items-center h-14 w-14 rounded-xl bg-white shadow-lg shadow-primary/20 ring-1 ring-white/10 overflow-hidden">
+                <Image
+                  src="/Badee-logo-without.png"
+                  alt="شعار برنامج بديع"
+                  width={56}
+                  height={56}
+                  className="h-full w-full object-contain p-1"
+                />
               </span>
               <div>
                 <p className="font-display font-black text-lg leading-none">

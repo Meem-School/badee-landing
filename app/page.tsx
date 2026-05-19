@@ -6,7 +6,6 @@ import { Problem } from "@/sections/Problem";
 import { Offer } from "@/sections/Offer";
 import { WhyChoose } from "@/sections/WhyChoose";
 import { Outputs } from "@/sections/Outputs";
-import { Fun } from "@/sections/Fun";
 import { Trust } from "@/sections/Trust";
 import { FAQ } from "@/sections/FAQ";
 import { FinalCTA } from "@/sections/FinalCTA";
@@ -23,7 +22,6 @@ export default function HomePage() {
         <Offer />
         <WhyChoose />
         <Outputs />
-        <Fun />
         <Trust />
         <FAQ />
         <FinalCTA />
