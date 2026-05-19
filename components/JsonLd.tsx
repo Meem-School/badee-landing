@@ -1,12 +1,13 @@
-import { INSTRUCTOR, PROGRAM, SITE } from "@/lib/constants";
+import { PROGRAM, SITE, TEAM } from "@/lib/constants";
 
 const organization = {
   "@context": "https://schema.org",
   "@type": "EducationalOrganization",
   name: SITE.poweredBy,
-  alternateName: "Meem School",
+  alternateName: ["Meem School", "فريق ميم"],
   url: SITE.url,
-  logo: `${SITE.url}/logo.png`,
+  logo: `${SITE.url}/Meem-logo.jpeg`,
+  description: TEAM.description,
   sameAs: ["https://www.instagram.com/meem.online.school"],
 };
 
@@ -18,6 +19,7 @@ const course = {
   provider: {
     "@type": "EducationalOrganization",
     name: SITE.poweredBy,
+    alternateName: TEAM.name,
     sameAs: SITE.url,
   },
   inLanguage: "ar",
@@ -27,18 +29,12 @@ const course = {
     educationalRole: "student",
     audienceType: PROGRAM.audience,
   },
-  instructor: {
-    "@type": "Person",
-    name: INSTRUCTOR.name,
-    jobTitle: INSTRUCTOR.title,
-    description: INSTRUCTOR.credentials.join(", "),
-  },
   hasCourseInstance: {
     "@type": "CourseInstance",
     courseMode: "online",
     courseWorkload: `PT${PROGRAM.sessions * 1.5}H`,
     startDate: "2026-06-16",
-    endDate: "2026-07-21",
+    endDate: "2026-07-18",
     location: {
       "@type": "VirtualLocation",
       url: SITE.url,

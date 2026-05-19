@@ -5,6 +5,7 @@ import { Sparkles, ChevronLeft, ShieldCheck, Users, Zap } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { WhatsAppButton } from "@/components/WhatsAppButton";
 import { FloatingRobot } from "@/components/FloatingRobot";
+import { Countdown } from "@/components/Countdown";
 import { PROGRAM } from "@/lib/constants";
 
 export function Hero() {
@@ -52,6 +53,14 @@ export function Hero() {
               يستخدموا الذكاء الاصطناعي عملياً — يبنوا مواقع، مشاريع، ومهارات تخليهم
               متقدمين على جيلهم.
             </motion.p>
+
+            <div className="mt-8">
+              <Countdown
+                target={PROGRAM.startDateISO}
+                title={`الانطلاق ${PROGRAM.startDate}`}
+                className="lg:items-start"
+              />
+            </div>
 
             <motion.div
               initial={{ opacity: 0, y: 20 }}

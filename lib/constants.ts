@@ -18,6 +18,10 @@ export const PROGRAM = {
   mode: "أونلاين تفاعلي",
   webinarDate: "6 / 6",
   startDate: "16 / 6",
+  endDate: "18 / 7",
+  /** ISO target for the countdown timer. Year is 2026. */
+  startDateISO: "2026-06-16T18:00:00+02:00",
+  endDateISO: "2026-07-18T20:00:00+02:00",
   originalPrice: 4000,
   discountedPrice: 2250,
   discountPercent: 45,
@@ -26,8 +30,8 @@ export const PROGRAM = {
   currencyLabel: "جنيه",
 } as const;
 
-const WHATSAPP_RAW = "201018844656";
-export const WHATSAPP_NUMBER_DISPLAY = "01018844656";
+const WHATSAPP_RAW = "201063275860";
+export const WHATSAPP_NUMBER_DISPLAY = "+20 10 63275860";
 
 const WHATSAPP_MESSAGE = `السلام عليكم 👋✨
 
@@ -44,15 +48,36 @@ export const WHATSAPP_LINK = `https://wa.me/${WHATSAPP_RAW}?text=${encodeURIComp
   WHATSAPP_MESSAGE,
 )}`;
 
-export const INSTRUCTOR = {
-  name: "م. أنس أحمد",
-  title: "AI Engineer",
-  credentials: [
-    "AI Researcher at AUC",
-    "3 سنين خبرة في AI Engineering",
-    "3 سنين خبرة تدريس",
-    "درّب أكثر من 400 طالب على منصات متعددة",
-    "خبرة مع Microsoft & iTech Solutions",
+export const TEAM = {
+  name: "فريق ميم",
+  tagline: "فريق متخصص في الذكاء الاصطناعي والتعليم التقني",
+  description:
+    "نحن فريق من المهندسين والباحثين والمعلمين، مهمتنا تبسيط الذكاء الاصطناعي وتعليمه للشباب العربي بأسلوب حديث وآمن.",
+  highlights: [
+    {
+      label: "خبرة أكثر من 3 سنوات",
+      desc: "في تطوير حلول AI حقيقية للسوق التعليمي والتجاري.",
+    },
+    {
+      label: "باحثون في AUC",
+      desc: "نشترك في أبحاث الذكاء الاصطناعي بالجامعة الأمريكية بالقاهرة.",
+    },
+    {
+      label: "AI Engineering فعلي",
+      desc: "خبرة عملية مع منصات وشركات تقنية رائدة.",
+    },
+    {
+      label: "+400 طالب تدرّبوا معانا",
+      desc: "على منصات تعليمية متعددة وبنتائج ملموسة.",
+    },
+    {
+      label: "تعليم تقني حديث",
+      desc: "مناهج مبنية على المشاريع، مش على الحفظ.",
+    },
+    {
+      label: "تبسيط AI للشباب العربي",
+      desc: "محتوى بالعربي يخاطب طالب 2026، مش 2010.",
+    },
   ],
 } as const;
 

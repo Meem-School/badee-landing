@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
-import { NAV_LINKS, SITE } from "@/lib/constants";
+import { NAV_LINKS } from "@/lib/constants";
 import { WhatsAppButton } from "@/components/WhatsAppButton";
 import { cn } from "@/lib/utils";
 
@@ -32,24 +32,18 @@ export function Navbar() {
       <div className="container flex items-center justify-between h-16 md:h-20">
         <a
           href="#hero"
-          className="flex items-center gap-3 group"
+          className="flex items-center gap-2 group"
           aria-label="بديع — الصفحة الرئيسية"
         >
-          <span className="relative grid place-items-center h-11 w-11 md:h-12 md:w-12 rounded-xl bg-white shadow-lg shadow-primary/20 ring-1 ring-white/10 overflow-hidden">
+          <span className="relative grid place-items-center h-12 w-12 md:h-14 md:w-14 rounded-xl bg-white shadow-lg shadow-primary/20 ring-1 ring-white/10 overflow-hidden">
             <Image
-              src="/Badee-logo-without.png"
-              alt="شعار برنامج بديع"
-              width={48}
-              height={48}
+              src="/Badee-logo.jpeg"
+              alt="شعار برنامج بديع — مبدعون بلا حدود"
+              width={56}
+              height={56}
               priority
-              className="h-full w-full object-contain p-0.5"
+              className="h-full w-full object-contain"
             />
-          </span>
-          <span className="font-display font-black text-lg leading-none tracking-tight">
-            {SITE.shortName}
-            <span className="block text-[10px] font-medium text-muted-foreground mt-1">
-              {SITE.tagline}
-            </span>
           </span>
         </a>
 

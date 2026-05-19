@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { SITE, NAV_LINKS, WHATSAPP_LINK, WHATSAPP_NUMBER_DISPLAY } from "@/lib/constants";
+import { SITE, NAV_LINKS, TEAM, WHATSAPP_LINK, WHATSAPP_NUMBER_DISPLAY } from "@/lib/constants";
 import { WhatsAppIcon } from "@/components/WhatsAppIcon";
 
 const hashtags = ["#بديع", "#مبدعون_بلا_حدود", "#AI_للمراهقين", "#Meem_School"];
@@ -10,22 +10,44 @@ export function Footer() {
       <div className="container py-14 md:py-16">
         <div className="grid md:grid-cols-12 gap-10">
           <div className="md:col-span-5">
-            <div className="flex items-center gap-3">
-              <span className="grid place-items-center h-14 w-14 rounded-xl bg-white shadow-lg shadow-primary/20 ring-1 ring-white/10 overflow-hidden">
+            <div className="flex flex-wrap items-center gap-4 sm:gap-5">
+              <span className="grid place-items-center h-20 w-20 rounded-2xl bg-white shadow-lg shadow-primary/20 ring-1 ring-white/10 overflow-hidden">
                 <Image
-                  src="/Badee-logo-without.png"
-                  alt="شعار برنامج بديع"
-                  width={56}
-                  height={56}
-                  className="h-full w-full object-contain p-1"
+                  src="/Badee-logo.jpeg"
+                  alt="شعار برنامج بديع — مبدعون بلا حدود"
+                  width={80}
+                  height={80}
+                  className="h-full w-full object-contain"
                 />
               </span>
-              <div>
-                <p className="font-display font-black text-lg leading-none">
-                  {SITE.shortName}
-                </p>
-                <p className="text-xs text-muted-foreground mt-1">{SITE.tagline}</p>
-              </div>
+
+              <span aria-hidden="true" className="h-12 w-px bg-white/10" />
+
+              <a
+                href="https://www.instagram.com/meem.online.school"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-2.5 group"
+                aria-label={`${TEAM.name} — Meem School`}
+              >
+                <span className="grid place-items-center h-20 w-20 rounded-2xl bg-white shadow-lg shadow-electric-500/20 ring-1 ring-white/10 overflow-hidden transition-transform group-hover:scale-105">
+                  <Image
+                    src="/Meem-logo.jpeg"
+                    alt="شعار مدرسة ميم — Meem School"
+                    width={80}
+                    height={80}
+                    className="h-full w-full object-contain"
+                  />
+                </span>
+                <span className="hidden sm:block">
+                  <span className="font-display font-black text-sm leading-none block">
+                    {TEAM.name}
+                  </span>
+                  <span className="text-[11px] text-muted-foreground mt-1 block">
+                    Powered by Meem
+                  </span>
+                </span>
+              </a>
             </div>
             <p className="mt-5 text-sm text-muted-foreground leading-relaxed max-w-md">
               برنامج بديع — حضانة المبدعين العرب في عالم الذكاء الاصطناعي. نحوّل الشباب

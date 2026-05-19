@@ -28,7 +28,7 @@ Copy `.env.example` → `.env.local`:
 
 ```env
 NEXT_PUBLIC_SITE_URL=https://badee.meem-online-school.vercel.app
-NEXT_PUBLIC_WHATSAPP_NUMBER=201018844656
+NEXT_PUBLIC_WHATSAPP_NUMBER=201063275860
 ```
 
 WhatsApp number and program details live in [lib/constants.ts](lib/constants.ts) — edit there for a single source of truth.
@@ -106,7 +106,7 @@ WhatsApp number and program details live in [lib/constants.ts](lib/constants.ts)
 Single source of truth in [lib/constants.ts](lib/constants.ts):
 
 ```ts
-const WHATSAPP_RAW = "201018844656";
+const WHATSAPP_RAW = "201063275860";
 export const WHATSAPP_LINK = `https://wa.me/${WHATSAPP_RAW}?text=${encodeURIComponent(...)}`;
 ```
 
@@ -167,7 +167,7 @@ Target Lighthouse: **95+ across all categories**.
 3. Framework auto-detects as **Next.js**. Build/install commands need no override.
 4. **Environment variables** (optional, only if you change defaults):
    - `NEXT_PUBLIC_SITE_URL=https://badee.meem-online-school.vercel.app`
-   - `NEXT_PUBLIC_WHATSAPP_NUMBER=201018844656`
+   - `NEXT_PUBLIC_WHATSAPP_NUMBER=201063275860`
 5. **Domain**: set `badee.meem-online-school.vercel.app` in Project → Settings → Domains.
 6. Deploy. Security headers from [vercel.json](vercel.json) apply automatically.
 
